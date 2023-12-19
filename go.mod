@@ -1,10 +1,10 @@
 module github.com/caddy-dns/acmeproxy
 
-go 1.21.5
+go 1.19
 
 require (
 	github.com/caddyserver/caddy/v2 v2.7.6
-	github.com/libdns/acmeproxy v0.0.0-20231219125428-e19223ab1d33
+	github.com/libdns/acmeproxy v0.0.0-20231219155640-179821506dc5
 )
 
 require (
