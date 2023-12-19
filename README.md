@@ -15,17 +15,17 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 
 ```json
 {
-	"module": "acme",
-	"challenges": {
-		"dns": {
-			"provider": {
-				"name": "acmeproxy",
+    "module": "acme",
+    "challenges": {
+        "dns": {
+            "provider": {
+                "name": "acmeproxy",
                 "username": "user",
-				"password": "pass",
+                "password": "pass",
                 "endpoint": "https://example.com:9090"
-			}
-		}
-	}
+            }
+        }
+    }
 }
 ```
 
@@ -33,7 +33,7 @@ or with the Caddyfile:
 
 ```
 tls {
-	dns acmeproxy https://example.com:9000 {
+    dns acmeproxy https://example.com:9000 {
         username user
         password pass
     }
