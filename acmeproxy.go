@@ -48,11 +48,10 @@ func (Provider) CaddyModule() caddy.ModuleInfo {
 // Implements caddy.Provisioner.
 func (p *Provider) Provision(ctx caddy.Context) error {
 	repl := caddy.NewReplacer()
-	ctx.Logger(Provider{}).Warn("Provisioning acmeproxy with endpoint " + p.Provider.Username)
 	p.Provider.Username = repl.ReplaceAll(p.Provider.Username, "")
-	ctx.Logger(Provider{}).Warn("Provisioning acmeproxy with endpoint " + p.Provider.Username)
 	p.Provider.Password = repl.ReplaceAll(p.Provider.Password, "")
 	p.Provider.Endpoint = repl.ReplaceAll(p.Provider.Endpoint, "")
+	ctx.Logger(Provider{}).Info("Provisioning with username: [" + p.Provider.Username + "] to endpoint [" + p.Provider.Endpoint + "]")
 	return nil
 }
 
