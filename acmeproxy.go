@@ -47,6 +47,10 @@ func (Provider) CaddyModule() caddy.ModuleInfo {
 
 // Implements caddy.Provisioner.
 func (p *Provider) Provision(ctx caddy.Context) error {
+	repl := caddy.NewReplacer()
+	p.Provider.Username = repl.ReplaceAll(p.Provider.Username, "")
+	p.Provider.Password = repl.ReplaceAll(p.Provider.Password, "")
+	p.Provider.Endpoint = repl.ReplaceAll(p.Provider.Endpoint, "")
 	return nil
 }
 
