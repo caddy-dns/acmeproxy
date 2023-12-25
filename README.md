@@ -11,7 +11,7 @@ dns.providers.acmeproxy
 
 ## XCaddy
 ```
-xcaddy build --with github.com/caddy-dns/acmeproxy@v1.0.3
+xcaddy build --with github.com/caddy-dns/acmeproxy@v1.0.4
 ```
 
 ## Config examples
