@@ -36,6 +36,8 @@ github.com/libdns/acmeproxy v0.0.0-20231219155640-179821506dc5 h1:HfLkgV4agOGyMK
 github.com/libdns/acmeproxy v0.0.0-20231219155640-179821506dc5/go.mod h1:H6PLM9B/FNhsfrju7bfGJ590kgY/TvU1HowAdYWPN7o=
 github.com/libdns/acmeproxy v0.0.0-20231219162617-5d741c5420d2 h1:uboLnOWQrGxM+WdjtqW7mvQoPcDWxzGUVf4f6vCi24o=
 github.com/libdns/acmeproxy v0.0.0-20231219162617-5d741c5420d2/go.mod h1:H6PLM9B/FNhsfrju7bfGJ590kgY/TvU1HowAdYWPN7o=
+github.com/libdns/acmeproxy v0.0.0-20231225160439-e51d10d5ee53 h1:YyO9J0PSo71mx6sNMuq3Bh3F3XE7mX8wlcsdYSv2pBM=
+github.com/libdns/acmeproxy v0.0.0-20231225160439-e51d10d5ee53/go.mod h1:H6PLM9B/FNhsfrju7bfGJ590kgY/TvU1HowAdYWPN7o=
 github.com/libdns/libdns v0.2.1 h1:Wu59T7wSHRgtA0cfxC+n1c/e+O3upJGWytknkmFEDis=
 github.com/libdns/libdns v0.2.1/go.mod h1:yQCXzk1lEZmmCPa857bnk4TsOiqYasqpyOEeSObbb40=
 github.com/matttproud/golang_protobuf_extensions v1.0.4 h1:mmDVorXM7PCGKw94cs5zkfA9PSy5pEvNWRP0ET0TIVo=

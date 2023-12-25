@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/caddyserver/caddy/v2 v2.7.6
-	github.com/libdns/acmeproxy v0.0.0-20231219162617-5d741c5420d2
+	github.com/libdns/acmeproxy v0.0.0-20231225160439-e51d10d5ee53
 )
 
 require (
