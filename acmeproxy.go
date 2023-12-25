@@ -61,36 +61,51 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	for d.Next() {
 		if d.NextArg() {
 			p.Provider.Endpoint = d.Val()
-		} else {
-			return d.ArgErr()
-		}
-		if d.NextArg() {
-			return d.ArgErr()
+			if d.NextArg() {
+				return d.ArgErr()
+			}
 		}
 		for nesting := d.Nesting(); d.NextBlock(nesting); {
 			switch d.Val() {
 			case "endpoint":
-				if p.Provider.Endpoint != "" {
-					return d.Err("API token already set")
-				}
-				p.Provider.Endpoint = d.Val()
 				if d.NextArg() {
+					if p.Provider.Endpoint != "" {
+						return d.Err("API token already set")
+					}
+					p.Provider.Endpoint = d.Val()
+					if d.NextArg() {
+						return d.ArgErr()
+					}
+				} else {
 					return d.ArgErr()
 				}
 			case "username":
-				p.Provider.Username = d.Val()
 				if d.NextArg() {
+					p.Provider.Username = d.Val()
+					if d.NextArg() {
+						return d.ArgErr()
+					}
+				} else {
 					return d.ArgErr()
 				}
+
 			case "password":
-				p.Provider.Password = d.Val()
 				if d.NextArg() {
+					p.Provider.Password = d.Val()
+					if d.NextArg() {
+
+						return d.ArgErr()
+					}
+				} else {
 					return d.ArgErr()
 				}
 			default:
 				return d.Errf("unrecognized subdirective '%s'", d.Val())
 			}
 		}
+	}
+	if p.Provider.Endpoint == "" {
+		return d.Err("endpoint must be specified")
 	}
 	return nil
 }
